@@ -23,7 +23,7 @@ html, body {
 body {
     font-family: Arial, sans-serif;
     color: #fff; /* Text color to ensure readability against the background */
-    background: url('images/background.jpg') no-repeat center center fixed; /* Updated background image */
+    background: url('images/wallpaper.png') no-repeat center center fixed; /* Updated background image */
     background-size: cover;
 }
 
