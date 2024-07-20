@@ -1,15 +1,13 @@
 @font-face {
-    font-family: 'CustomFont'; /* Name the font as you like */
-    src: url('fonts/OMORI_GAME2.ttf') format('truetype'); /* Path to your TTF file */
+    font-family: 'CustomFont'; 
+    src: url('fonts/OMORI_GAME2.ttf') format('truetype'); 
 }
 
 @font-face {
-    font-family: 'CustomFont2'; /* Name the font as you like */
-    src: url('fonts/OMORI_GAME.ttf') format('truetype'); /* Path to your TTF file */
+    font-family: 'CustomFont2'; 
+    src: url('fonts/OMORI_GAME.ttf') format('truetype'); 
 }
 
-
-/* Resetting margins and paddings */
 * {
     margin: 0;
     padding: 0;
@@ -22,8 +20,8 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    color: #fff; /* Text color to ensure readability against the background */
-    background: url('images/wallpaper.png') no-repeat center center fixed; /* Updated background image */
+    color: #fff;
+    background: url('images/wallpaper.png') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -37,80 +35,78 @@ body {
 }
 
 .window {
-    background-color: rgba(23, 23, 23, 0.7); /* Black with 70% opacity */
-    color: #fff; /* Text color for readability */
-    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(23, 23, 23, 0.7); 
+    color: #fff;
+    border-radius: 10px;
     padding: 40px;
-    width: 50vw; /* 50% of the viewport width */
-    height: 55vh; /* 55% of the viewport height */
-    max-width: none; /* Removes maximum width */
-    max-height: none; /* Removes maximum height */
-    
+    width: 50vw;
+    height: 55vh;
+    max-width: none;
+    max-height: none;
     display: inline-block;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
-    text-align: center; /* Center text inside the window */
-    overflow: auto; /* Adds scroll bars if content overflows */
-    position: relative; /* Position relative to contain the profile picture and GIF */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    overflow: auto;
+    position: relative;
 }
 
 .profile-picture-container {
-    position: relative; /* This makes it the reference point for positioning the bow image and title-bio */
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Center items vertically */
-    gap: 20px; /* Space between profile picture and title-bio */
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .profile-picture {
-    width: 100px; /* Size of the profile picture */
-    height: 100px; /* Size of the profile picture */
-    border-radius: 5%; /* Makes the image round */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
 .profile-picture img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-fit: cover;
 }
 
 .bow-container {
-    position: absolute; /* Position the bow container absolutely within the profile-picture-container */
-    top: -20px; /* Adjust as needed to position the bow */
-    right: 913px; /* Adjust as needed to position the bow */
-    width: 50px; /* Adjust size of the bow container */
-    height: 50px; /* Adjust size of the bow container */
-    overflow: visible; /* Ensure the bow image can extend beyond its container */
-    z-index: 1; /* Ensure the bow image appears on top of the profile picture */
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 50px;
+    height: 50px;
+    overflow: visible;
+    z-index: 1;
 }
 
 .bow-image {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
 }
 
 .title-bio {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align items to the start (left) */
-    color: #fff; /* Text color to ensure readability */
-    font-family: Arial, sans-serif; /* Fallback font if custom fonts are not available */
+    align-items: flex-start;
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
 
 .title {
-    font-family: 'CustomFont2', Arial, sans-serif; /* Use CustomFont2 for the title */
-    font-size: 80px; /* Adjust font size for the title */
-    font-weight: bold; /* Make the title bold */
-    margin: 0; /* Remove default margin */
+    font-family: 'CustomFont2', Arial, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .bio {
-    font-family: 'CustomFont', Arial, sans-serif; /* Use CustomFont for the bio */
-    font-size: 20px; /* Adjust font size for the bio */
-    color: #dcdcdc; /* Slightly lighter color for the bio */
-    margin: 0; /* Remove default margin */
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 20px;
+    color: #dcdcdc;
+    margin: 0;
 }
-
 
 .controls {
     position: absolute;
@@ -123,9 +119,8 @@ body {
 .audio-control {
     font-family: 'CustomFont', Arial, sans-serif;
     font-size: 23px;
-    width: 80px; /* Fixed width */
-    height: 40px; /* Fixed height */
-    padding: 0; /* Remove padding to ensure consistent size */
+    width: 80px;
+    height: 40px;
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #e7e7e7;
@@ -145,9 +140,9 @@ body {
 
 .volume-control {
     width: 60px;
-    -webkit-appearance: none; /* Override default CSS styles */
+    -webkit-appearance: none;
     appearance: none;
-    background: rgb(255, 255, 255); /* Slider track */
+    background: rgb(255, 255, 255);
     height: 2.5px;
     border-radius: 5px;
     outline: none;
@@ -160,12 +155,12 @@ body {
 }
 
 .volume-control::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none;
     appearance: none;
-    width: 7px; /* Thumb width */
-    height: 7px; /* Thumb height */
-    background: rgb(255, 255, 255); /* Thumb color */
-    cursor: pointer; /* Mouse pointer on hover */
+    width: 7px;
+    height: 7px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
     border-radius: 50%;
 }
 
@@ -176,22 +171,6 @@ body {
     cursor: pointer;
     border-radius: 50%;
 }
-
-.gif-container {
-    position: absolute;
-    bottom: 4px; /* Distance from the bottom of the window */
-    left: 14px; /* Align with the profile picture */
-    width: 190px; /* Size of the GIF container */
-    height: 330px; /* Size of the GIF container */
-}
-
-.gif-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the GIF covers the container without distortion */
-    border-radius: 0%; /* Optional: adds rounded corners */
-}
-/* Existing styles... */
 
 .gif-container {
     position: absolute;
@@ -208,12 +187,11 @@ body {
     border-radius: 0%;
 }
 
-/* New styles for the socials section */
 .socials {
     position: absolute;
     bottom: 30px;
-    left: 220px; /* Adjust based on the size of your gif-container */
-    width: 150px; /* Adjust based on your design needs */
+    left: 220px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -222,52 +200,59 @@ body {
 .social-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Space between items */
+    margin-bottom: 20px;
+}
+
+.social-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .social-icon {
-    width: 60px; /* Adjust icon size */
-    border-radius: 20%; /* Makes the image round */
+    width: 60px;
     height: 60px;
-    margin-right: 10px; /* Space between icon and text */
+    border-radius: 20%;
+    margin-right: 10px;
 }
 
 .social-text {
-    font-family: 'CustomFont', Arial, sans-serif;/* Fallback to Arial or sans-serif if CustomFont2 is not available */
-    color: #fff; /* Ensure text is visible */
-    font-size: 30px; /* Adjust font size as needed */
+    font-family: 'CustomFont', Arial, sans-serif;
+    color: #fff;
+    font-size: 30px;
 }
 
-/* Optional: Add hover effects for better UX */
 .social-item:hover .social-icon {
-    opacity: 0.8; /* Slight fade effect */
+    opacity: 0.8;
 }
+
 .quote-generator {
     position: absolute;
-    bottom: 80px; /* Position to the right of the socials section */
-    left: 500px; /* Adjust based on your design needs */
-    width: 380px; /* Width of the quote box */
-    height: 200px; /* Fixed height for the quote box */
+    bottom: 80px;
+    left: 500px;
+    width: 380px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Same background color as the window */
-    padding: 20px; /* Padding inside the box */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     border-radius: 10px;
-    overflow: hidden; /* Hide overflow content */
-    justify-content: center; /* Center content vertically */
+    overflow: hidden;
+    justify-content: center;
 }
 
 .quote-text {
-    color: #fff; /* White text for readability */
-    font-family: 'CustomFont', Arial, sans-serif; /* Use CustomFont for consistency */
-    font-size: 21px; /* Adjust size as needed */
+    color: #fff;
+    font-family: 'CustomFont', Arial, sans-serif;
+    font-size: 21px;
     text-align: center;
-    margin-bottom: 10px; /* Reduced space between quote and button */
-    overflow-y: auto; /* Add vertical scroll if text overflows */
-    height: 120px; /* Increase height for the text area to fit more content */
-    display: flex; /* Flexbox to control content alignment */
-    align-items: center; /* Center text vertically */
+    margin-bottom: 10px;
+    overflow-y: auto;
+    height: 120px;
+    display: flex;
+    align-items: center;
 }
 
 .generate-button {
@@ -278,9 +263,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'CustomFont2', Arial, sans-serif; /* Use CustomFont2 for consistency */
+    font-family: 'CustomFont2', Arial, sans-serif;
     font-size: 21px;
-    margin-top: 5px; /* Adjusted to move the button up */
+    margin-top: 5px;
 }
 
 .generate-button:hover {
