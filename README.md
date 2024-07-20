@@ -1,7 +1,5 @@
 # mnaomn.github.io
 
-Sure, here's a concise README in the style of your website:
-
 ---
 
 # Nene's World
