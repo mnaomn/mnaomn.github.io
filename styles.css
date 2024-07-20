@@ -39,7 +39,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
     text-align: center; /* Center text inside the window */
     overflow: auto; /* Adds scroll bars if content overflows */
-    position: relative; /* Position relative to contain the profile picture and iframe */
+    position: relative; /* Position relative to contain the profile picture and GIF */
 }
 
 .profile-picture-container {
@@ -75,14 +75,6 @@ body {
 .bow-image {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
-}
-
-
-.spotify-embed {
-    position: absolute;
-    top: 160px; /* Position directly below the profile picture */
-    left: 20px; /* Align with the profile picture */
-    border-radius: 12px;
 }
 
 .controls {
@@ -147,12 +139,11 @@ body {
     cursor: pointer;
     border-radius: 50%;
 }
-/* Existing CSS */
 
 .gif-container {
     position: absolute;
     bottom: 4px; /* Distance from the bottom of the window */
-    left: 14px; /* Align with the profile picture and Spotify embed */
+    left: 14px; /* Align with the profile picture */
     width: 130px; /* Size of the GIF container */
     height: 250px; /* Size of the GIF container */
 }
