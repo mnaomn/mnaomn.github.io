@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nene</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="background-audio" src="audio/Emotype.mp3" loop></audio>
+    <div class="controls">
+      <button id="audio-control" class="audio-control">pause</button>
+      <input
+        type="range"
+        id="volume-control"
+        class="volume-control"
+        min="0"
+        max="1"
+        step="0.01"
+        value="1"
+      />
+    </div>
+    <div class="content">
+      <div class="window">
+        <div class="profile-picture">
+          <img src="images/IMG_0029.png" alt="Profile Picture" />
+        </div>
+        <iframe
+          class="spotify-embed"
+          src="https://open.spotify.com/embed/track/7dG1T4MdtxswggvX16owFU?utm_source=generator"
+          width="300"
+          height="80"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <!-- New GIF container -->
+        <div class="gif-container">
+          <img src="images/omori-omori-enemy.gif" alt="Fun GIF" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
