@@ -1,7 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const audio = document.getElementById('background-audio');
-  const controlButton = document.getElementById('audio-control');
-  const volumeControl = document.getElementById('volume-control');
+document.addEventListener('DOMContentLoaded', function() {
+  const overlay = document.getElementById('blur-overlay');
+  const content = document.getElementById('content');
+  const audio = document.getElementById('background-music');
+  const playPauseButton = document.getElementById('play-pause');
+  const volumeSlider = document.getElementById('volume-slider');
+
+  let isPlaying = false;
+
+  audio.volume = 0.5;  // Set initial volume to 50%
+
+  overlay.addEventListener('click', function() {
+      overlay.classList.add('hidden');
+      content.classList.remove('hidden');
+
+      if (!isPlaying) {
+          audio.play();
+          playPauseButton.textContent = 'Pause';
+          isPlaying = true;
+      } else {
+          audio.pause();
+          playPauseButton.textContent = 'Play';
+          isPlaying = false;
+      }
+  });
+
+  playPauseButton.addEventListener('click', function() {
+      if (isPlaying) {
+          audio.pause();
+          playPauseButton.textContent = 'Play';
+      } else {
+          audio.play();
+          playPauseButton.textContent = 'Pause';
+      }
+      isPlaying = !isPlaying;
+  });
+
+  volumeSlider.addEventListener('input', function() {
+      audio.volume = volumeSlider.value / 100;
+  });
 
   const quotes = [
     "how far will you go to save a friend?\nVOID",
@@ -31,42 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     "the universe is full of questions that you will never answer. yet... there are also ones that only you can answer. when the truth is revealed, what will you do?\nABSENT",
     "my heart is frozen. i am pure, like ice. i feel nothing. i will never feel anything again.\nSPACE EX-HUSBAND"
   ];
-  
+
   const quoteDisplay = document.getElementById('quote-display');
-  const generateButton = document.getElementById('generate-quote');
+  const generateQuoteButton = document.getElementById('generate-quote');
 
-  function updateAudioControl() {
-    if (audio.paused) {
-      audio.play().then(() => {
-        controlButton.textContent = 'pause';
-      }).catch(error => {
-        console.log('Autoplay was prevented:', error);
-      });
-    } else {
-      audio.pause();
-      controlButton.textContent = 'play';
-    }
-  }
-
-  function updateVolume() {
-    audio.volume = volumeControl.value;
-  }
-
-  function getRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
-  }
-
-  controlButton.addEventListener('click', updateAudioControl);
-  volumeControl.addEventListener('input', updateVolume);
-
-  generateButton.addEventListener('click', () => {
-    quoteDisplay.textContent = getRandomQuote();
-  });
-
-  audio.play().then(() => {
-    controlButton.textContent = 'pause';
-  }).catch(error => {
-    console.log('Autoplay was prevented:', error);
+  generateQuoteButton.addEventListener('click', function() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteDisplay.textContent = quotes[randomIndex];
   });
 });

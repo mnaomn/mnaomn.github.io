@@ -7,20 +7,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <audio id="background-audio" src="audio/Emotype.mp3" loop></audio>
-    <div class="controls">
-      <button id="audio-control" class="audio-control">play</button>
-      <input
-        type="range"
-        id="volume-control"
-        class="volume-control"
-        min="0"
-        max="1"
-        step="0.01"
-        value="1"
-      />
-    </div>
-    <div class="content">
+    <div class="blur-overlay" id="blur-overlay">Click to enter</div>
+    <div class="content hidden" id="content">
       <div class="window">
         <div class="profile-picture-container">
           <div class="profile-picture">
@@ -96,6 +84,18 @@
         </div>
       </div>
     </div>
+    <div class="audio-controls hidden" id="audio-controls">
+      <button id="play-pause" class="audio-button">Play</button>
+      <input
+        type="range"
+        id="volume-slider"
+        class="volume-slider"
+        min="0"
+        max="100"
+        value="50"
+      />
+    </div>
+    <audio id="background-music" src="audio/Emotype.mp3" loop></audio>
     <script src="script.js"></script>
   </body>
 </html>
