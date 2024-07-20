@@ -42,12 +42,16 @@ body {
     position: relative; /* Position relative to contain the profile picture and iframe */
 }
 
-.profile-picture {
-    position: absolute;
-    top: 20px; /* Distance from the top of the window */
-    left: 20px; /* Distance from the left edge of the window */
+.profile-picture-container {
+    position: relative; /* This makes it the reference point for positioning the bow image */
     width: 100px; /* Size of the profile picture */
     height: 100px; /* Size of the profile picture */
+}
+
+.profile-picture {
+    position: relative; /* Position profile picture relative to its container */
+    width: 100%;
+    height: 100%;
     border-radius: 5%; /* Makes the image round */
     overflow: hidden;
 }
@@ -58,9 +62,25 @@ body {
     object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
+.bow-container {
+    position: absolute; /* Position the bow container absolutely within the profile-picture-container */
+    top: -20px; /* Adjust as needed to position the bow */
+    right: 67px; /* Adjust as needed to position the bow */
+    width: 50px; /* Adjust size of the bow container */
+    height: 50px; /* Adjust size of the bow container */
+    overflow: visible; /* Ensure the bow image can extend beyond its container */
+    z-index: 1; /* Ensure the bow image appears on top of the profile picture */
+}
+
+.bow-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+
 .spotify-embed {
     position: absolute;
-    top: 140px; /* Position directly below the profile picture */
+    top: 160px; /* Position directly below the profile picture */
     left: 20px; /* Align with the profile picture */
     border-radius: 12px;
 }
