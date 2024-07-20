@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'CustomFont'; /* Name the font as you like */
+    src: url('fonts/OMORI_GAME2.ttf') format('truetype'); /* Path to your TTF file */
+}
+
+@font-face {
+    font-family: 'CustomFont2'; /* Name the font as you like */
+    src: url('fonts/OMORI_GAME.ttf') format('truetype'); /* Path to your TTF file */
+}
+
+
 /* Resetting margins and paddings */
 * {
     margin: 0;
@@ -43,15 +54,15 @@ body {
 }
 
 .profile-picture-container {
-    position: relative; /* This makes it the reference point for positioning the bow image */
-    width: 100px; /* Size of the profile picture */
-    height: 100px; /* Size of the profile picture */
+    position: relative; /* This makes it the reference point for positioning the bow image and title-bio */
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between profile picture and title-bio */
 }
 
 .profile-picture {
-    position: relative; /* Position profile picture relative to its container */
-    width: 100%;
-    height: 100%;
+    width: 100px; /* Size of the profile picture */
+    height: 100px; /* Size of the profile picture */
     border-radius: 5%; /* Makes the image round */
     overflow: hidden;
 }
@@ -65,7 +76,7 @@ body {
 .bow-container {
     position: absolute; /* Position the bow container absolutely within the profile-picture-container */
     top: -20px; /* Adjust as needed to position the bow */
-    right: 67px; /* Adjust as needed to position the bow */
+    right: 913px; /* Adjust as needed to position the bow */
     width: 50px; /* Adjust size of the bow container */
     height: 50px; /* Adjust size of the bow container */
     overflow: visible; /* Ensure the bow image can extend beyond its container */
@@ -76,6 +87,30 @@ body {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
 }
+
+.title-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start (left) */
+    color: #fff; /* Text color to ensure readability */
+    font-family: Arial, sans-serif; /* Fallback font if custom fonts are not available */
+}
+
+.title {
+    font-family: 'CustomFont2', Arial, sans-serif; /* Use CustomFont2 for the title */
+    font-size: 80px; /* Adjust font size for the title */
+    font-weight: bold; /* Make the title bold */
+    margin: 0; /* Remove default margin */
+}
+
+.bio {
+    font-family: 'CustomFont', Arial, sans-serif; /* Use CustomFont for the bio */
+    font-size: 20px; /* Adjust font size for the bio */
+    color: #dcdcdc; /* Slightly lighter color for the bio */
+    margin: 0; /* Remove default margin */
+}
+
 
 .controls {
     position: absolute;
@@ -153,4 +188,55 @@ body {
     height: 100%;
     object-fit: cover; /* Ensures the GIF covers the container without distortion */
     border-radius: 0%; /* Optional: adds rounded corners */
+}
+/* Existing styles... */
+
+.gif-container {
+    position: absolute;
+    bottom: 4px;
+    left: 14px;
+    width: 190px;
+    height: 330px;
+}
+
+.gif-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0%;
+}
+
+/* New styles for the socials section */
+.socials {
+    position: absolute;
+    bottom: 30px;
+    left: 220px; /* Adjust based on the size of your gif-container */
+    width: 150px; /* Adjust based on your design needs */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between items */
+}
+
+.social-icon {
+    width: 60px; /* Adjust icon size */
+    border-radius: 20%; /* Makes the image round */
+    height: 60px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.social-text {
+    font-family: 'CustomFont', Arial, sans-serif;/* Fallback to Arial or sans-serif if CustomFont2 is not available */
+    color: #fff; /* Ensure text is visible */
+    font-size: 30px; /* Adjust font size as needed */
+}
+
+/* Optional: Add hover effects for better UX */
+.social-item:hover .social-icon {
+    opacity: 0.8; /* Slight fade effect */
 }
