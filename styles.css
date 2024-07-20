@@ -77,8 +77,8 @@ body {
     top: -17%;
     right: 96.7%;
     width: 5%;
-    height: auto; /* Changed from 1% to auto */
-    overflow: hidden; /* Changed from visible to hidden */
+    height: auto; 
+    overflow: hidden; 
     z-index: 1;
 }
 
@@ -101,7 +101,7 @@ body {
     font-size: 80px;
     font-weight: bold;
     margin: 0;
-    line-height: 1.1; /* Added for better readability */
+    line-height: 1.1; 
 }
 
 .bio {
@@ -109,7 +109,7 @@ body {
     font-size: 20px;
     color: #dcdcdc;
     margin: 0;
-    line-height: 1.5; /* Added for better readability */
+    line-height: 1.5; 
 }
 
 .gif-container {
@@ -193,7 +193,7 @@ body {
     height: 120px;
     display: flex;
     align-items: center;
-    line-height: 1.5; /* Added for better readability */
+    line-height: 1.5; 
 }
 
 .generate-button {

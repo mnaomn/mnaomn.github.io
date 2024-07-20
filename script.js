@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let isPlaying = false;
 
-  audio.volume = 0.5;  // Set initial volume to 50%
+  audio.volume = 0.5;  
 
   overlay.addEventListener('click', function() {
       overlay.classList.add('hidden');
